@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Torre de Hanói</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Torre de Hanói</h1>
+      <p>
+        Mova todos os discos da Torre A para a Torre C, avançando pelos níveis!
+      </p>
+      <button id="how-to-play" class="info-btn">
+        <i class="fas fa-info-circle"></i> Como Jogar
+      </button>
+    </header>
+
+    <div class="controls">
+      <label for="difficulty">Escolha o número de discos:</label>
+      <select id="difficulty">
+        <option value="3">3 Discos (Fácil)</option>
+        <option value="4" selected>4 Discos (Médio)</option>
+        <option value="5">5 Discos (Difícil)</option>
+      </select>
+      <button id="restart-control" class="btn">Reiniciar</button>
+      <!-- Botão de reiniciar -->
+      <p id="moves-counter">Movimentos: 0 / <span id="max-moves"></span></p>
+    </div>
+
+    <section class="game-container">
+      <div class="tower" id="towerA"></div>
+      <div class="tower" id="towerB"></div>
+      <div class="tower" id="towerC"></div>
+    </section>
+
+    <div id="victory-message" class="hidden">
+      <h2>Parabéns, você venceu!</h2>
+      <p>
+        Você completou o desafio em <span id="total-moves">X</span> movimentos.
+      </p>
+      <button id="restart">Reiniciar</button>
+    </div>
+
+    <div id="failure-message" class="hidden">
+      <h2>Você excedeu o número de movimentos permitidos!</h2>
+      <p>Movimentos usados: <span id="used-moves">X</span></p>
+      <button id="restart-failure">Tentar Novamente</button>
+    </div>
+
+    <!-- Modal de Como Jogar -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Como Jogar Torre de Hanói</h2>
+        <p>
+          <em
+            >O objetivo do jogo é mover todos os discos da Torre A para a Torre
+            C, seguindo estas regras:</em
+          >
+        </p>
+        <ul>
+          <li>1 - Você pode mover apenas um disco por vez.</li>
+          <li>
+            2 - Um disco maior nunca pode ser colocado sobre um disco menor.
+          </li>
+          <li>3 - Você pode usar a Torre B como intermediária.</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
