@@ -15,7 +15,7 @@ const maxMovesDisplay = document.getElementById("max-moves");
 const restartBtn = document.getElementById("restart");
 const restartFailureBtn = document.getElementById("restart-failure");
 const difficultySelect = document.getElementById("difficulty");
-const restartControlBtn = document.getElementById("restart-control"); // Novo botão de reiniciar ao lado da dificuldade
+const restartControlBtn = document.getElementById("restart-control");
 
 // Modal de Como Jogar
 const modal = document.getElementById("modal");
@@ -54,8 +54,8 @@ function generateDiscs(difficulty) {
     towerA.appendChild(disc);
   }
 
-  // Ajustar a largura das torres para dificuldade difícil
-  if (difficulty == 5) {
+  // Ajustar a largura das torres para dificuldade difícil e quase impossível
+  if (difficulty >= 5) {
     towers.forEach((tower) => tower.classList.add("dificil"));
   } else {
     towers.forEach((tower) => tower.classList.remove("dificil"));
@@ -63,11 +63,13 @@ function generateDiscs(difficulty) {
 
   // Definir os movimentos máximos permitidos com base na dificuldade
   if (difficulty == 3) {
-    maxMoves = 7; // Por exemplo, para 3 discos
+    maxMoves = 7; // Para 3 discos
   } else if (difficulty == 4) {
     maxMoves = 15; // Para 4 discos
   } else if (difficulty == 5) {
     maxMoves = 31; // Para 5 discos
+  } else if (difficulty == 6) {
+    maxMoves = 63; // Nova dificuldade - Quase Impossível com 6 discos
   }
 
   moveCount = 0;

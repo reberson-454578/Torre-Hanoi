@@ -193,16 +193,19 @@ header p {
 }
 
 /* Game Container */
+
 .game-container {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 400px;
   margin-top: 30px;
+  margin-bottom: 10px; /* Mais próxima da borda inferior */
+  gap: 60px; /* Espaçamento entre as torres */
   opacity: 0;
   transform: translateY(50px); /* Vem de baixo */
   animation: slideInUp 1.8s ease forwards;
-  animation-delay: 1.5s; /* Atraso de entrada */
+  animation-delay: 1.5s;
 }
 
 /* Torres */
@@ -210,7 +213,6 @@ header p {
   width: 150px;
   height: 300px;
   background: linear-gradient(135deg, #e1e4ea, #f3f4f7);
-  margin: 0 30px;
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
@@ -222,10 +224,10 @@ header p {
   margin-bottom: 20px;
 }
 
-/* Ajuste das Torres para dificuldade Difícil */
+/* Ajuste das torres para o nível difícil e quase impossível */
 .tower.dificil {
-  width: 200px; /* Aumenta a largura para 200px */
-  height: 350px;
+  width: 220px; /* Aumenta a largura para acomodar o sexto disco */
+  height: 400px; /* Aumenta a altura para garantir que todos os discos caibam */
 }
 
 .tower:hover {
@@ -268,6 +270,11 @@ header p {
 .disc[data-size="5"] {
   width: 170px;
   background: linear-gradient(145deg, #ff6bff, #ff92ff);
+}
+
+.disc[data-size="6"] {
+  width: 200px; /* Largura maior para o sexto disco */
+  background: linear-gradient(145deg, #ff9f1c, #ffbf69); /* Cor laranja */
 }
 
 /* Animação do pulo */
