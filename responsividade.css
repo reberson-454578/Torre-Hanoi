@@ -142,7 +142,8 @@
   }
 
   .controls {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 8px;
     padding: 10px;
     font-size: 0.8rem;
@@ -169,6 +170,7 @@
   .tower {
     width: 80px; /* Torres ainda menores */
     height: 140px; /* Altura mais baixa */
+    margin-bottom: 110px;
   }
 
   .tower.dificil {
