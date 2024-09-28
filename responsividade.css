@@ -15,7 +15,7 @@
   /* Reposicionando o botão "Como Jogar" abaixo do título */
   .info-btn {
     display: block;
-    margin: 15px auto; /* Centraliza o botão abaixo do título */
+    margin: 10px auto 0; /* Reduzindo o espaço abaixo do botão */
     font-size: 1rem;
     padding: 8px 15px;
     display: flex;
@@ -34,6 +34,7 @@
     gap: 10px;
     padding: 10px;
     font-size: 0.9rem;
+    margin-bottom: 0; /* Removendo o espaço extra abaixo dos controles */
   }
 
   .controls select {
@@ -50,13 +51,14 @@
   #moves-counter {
     padding: 7px 15px;
     font-size: 0.9rem;
+    margin-bottom: 10px; /* Ajustando o espaço abaixo do contador de movimentos */
   }
 
   /* Ajustando a área do jogo */
   .game-container {
-    height: 240px; /* Reduzindo ainda mais a altura da área do jogo */
-    margin-top: 20px;
-    gap: 30px;
+    height: auto; /* Tornando a altura automática para eliminar espaço extra */
+    margin-top: 10px; /* Reduzindo o espaço acima das torres */
+    gap: 10px; /* Diminuindo o espaço entre as torres */
   }
 
   .tower {
@@ -125,7 +127,7 @@
 
   .info-btn {
     display: block;
-    margin: 15px auto; /* Centraliza o botão abaixo do título */
+    margin: 10px auto 0; /* Reduzindo o espaço abaixo do botão */
     font-size: 0.8rem;
     padding: 6px;
     display: flex;
@@ -144,6 +146,7 @@
     gap: 8px;
     padding: 10px;
     font-size: 0.8rem;
+    margin-bottom: 0; /* Removendo o espaço extra abaixo dos controles */
   }
 
   .controls select {
@@ -158,7 +161,8 @@
   }
 
   .game-container {
-    height: 160px; /* Reduzindo ainda mais a área do jogo */
+    height: auto; /* Tornando a altura automática para eliminar espaço extra */
+    margin-top: 10px; /* Reduzindo o espaço acima das torres */
     gap: 10px;
   }
 
