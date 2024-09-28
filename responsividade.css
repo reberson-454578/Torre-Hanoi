@@ -1,0 +1,217 @@
+/* Ajustes gerais para telas menores que 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Reduzindo o tamanho do título */
+  }
+
+  header p {
+    display: none; /* Removendo o parágrafo abaixo do título */
+  }
+
+  /* Reposicionando o botão "Como Jogar" abaixo do título */
+  .info-btn {
+    display: block;
+    margin: 15px auto; /* Centraliza o botão abaixo do título */
+    font-size: 1rem;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: static; /* Remove a posição absoluta */
+  }
+
+  .info-btn i {
+    margin-right: 0; /* Remover qualquer margem desnecessária */
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .controls select {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    width: 150px; /* Reduzindo o tamanho do select */
+  }
+
+  .controls button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  #moves-counter {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajustando a área do jogo */
+  .game-container {
+    height: 240px; /* Reduzindo ainda mais a altura da área do jogo */
+    margin-top: 20px;
+    gap: 30px;
+  }
+
+  .tower {
+    width: 80px; /* Reduzindo a largura das torres */
+    height: 140px; /* Reduzindo ainda mais a altura das torres */
+  }
+
+  /* Ajustando os discos para serem menores e proporcionais */
+  .disc {
+    height: 15px; /* Reduzindo ainda mais a altura dos discos */
+    margin-bottom: 3px;
+  }
+
+  .disc[data-size="1"] {
+    width: 35px;
+  }
+
+  .disc[data-size="2"] {
+    width: 55px;
+  }
+
+  .disc[data-size="3"] {
+    width: 75px;
+  }
+
+  .disc[data-size="4"] {
+    width: 95px;
+  }
+
+  .disc[data-size="5"] {
+    width: 115px;
+  }
+
+  .disc[data-size="6"] {
+    width: 135px;
+  }
+
+  /* Mensagens de vitória e falha ajustadas para telas menores */
+  #victory-message,
+  #failure-message {
+    padding: 40px;
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  #victory-message button,
+  #failure-message button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Ajustes para telas menores que 480px */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    display: none; /* Mantém o parágrafo removido */
+  }
+
+  .info-btn {
+    display: block;
+    margin: 15px auto; /* Centraliza o botão abaixo do título */
+    font-size: 0.8rem;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: static; /* Remove a posição absoluta */
+  }
+
+  .info-btn i {
+    margin-right: 0;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .controls select {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    width: 140px;
+  }
+
+  .controls button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .game-container {
+    height: 160px; /* Reduzindo ainda mais a área do jogo */
+    gap: 10px;
+  }
+
+  .tower {
+    width: 80px; /* Torres ainda menores */
+    height: 140px; /* Altura mais baixa */
+  }
+
+  .tower.dificil {
+    width: 110px; /* Aumenta a largura para acomodar o sexto disco */
+    height: 180px; /* Aumenta a altura para garantir que todos os discos caibam */
+  }
+
+  .disc {
+    height: 12px; /* Reduzindo a altura dos discos */
+    margin-bottom: 2px;
+  }
+
+  /* Ajuste dos discos para tamanhos proporcionais em telas pequenas */
+  .disc[data-size="1"] {
+    width: 22px;
+  }
+
+  .disc[data-size="2"] {
+    width: 37px;
+  }
+
+  .disc[data-size="3"] {
+    width: 52px;
+  }
+
+  .disc[data-size="4"] {
+    width: 67px;
+  }
+
+  .disc[data-size="5"] {
+    width: 82px;
+  }
+
+  .disc[data-size="6"] {
+    width: 97px;
+  }
+
+  /* Mensagens de vitória/falha ajustadas para telas menores */
+  #victory-message,
+  #failure-message {
+    padding: 30px;
+    font-size: 0.9rem;
+  }
+
+  #victory-message button,
+  #failure-message button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
